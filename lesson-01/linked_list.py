@@ -42,6 +42,37 @@ class link_list:
     prev.next=temp.next
     temp=None
 
+  def reverse(self):
+    curr=self.head
+    prev=None
+    while(curr):
+      nextnode=curr.next
+      curr.next=prev
+      prev=curr
+      curr=nextnode
+    self.head=prev
+
+  def findmid_del(self):
+    temp=temp1=self.head
+    prev=None
+    while temp1 and temp1.next:
+      temp=temp.next
+      temp1=temp1.next.next
+    print(temp.data)
+    prev.next=None
+    temp=None
+
+  def delete_e(self):
+    self.head=self.head.next
+    temp=self.head
+    prev=None
+  
+    while temp and temp.next:
+      prev= temp
+      temp= temp.next
+    prev.next=None
+
+
 
   def print(self):
     temp=self.head
@@ -59,4 +90,10 @@ list1.append(Node(50))
 # list1.insert(Node(555),3)
 # list1.print()
 list1.delete(30)
+list1.print()
+list1.reverse()
+list1.print()
+# list1.findmid_del()
+# list1.print()
+list1.delete_e()
 list1.print()
