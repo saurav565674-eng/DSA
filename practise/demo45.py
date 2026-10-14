@@ -123,7 +123,7 @@ if __name__ =="__main__":
     li.delete1()
     li.traverse()
     li.reverse()
-    li.traverse(y)
+    li.traverse()
   
 
 
