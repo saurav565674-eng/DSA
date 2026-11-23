@@ -25,7 +25,8 @@ class BST:
                     else:
                         temp=temp.right   
 
-
+   
+    
     def inorder(self,rt):
         if rt is None:
             return
